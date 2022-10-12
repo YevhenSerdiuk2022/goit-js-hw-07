@@ -15,7 +15,7 @@ function createPictureCardMarkup (gallerys) {
         return `
        
       <a class="gallery__item" href="${original}">
-        <img class="gallery__image" src="${preview}" title="${description}" alt="${description}">
+        <img class="gallery__image" src="${preview}" alt="${description}">
       </a>
  
     `;
@@ -24,6 +24,8 @@ function createPictureCardMarkup (gallerys) {
 }
 
 new SimpleLightbox('.gallery a', {
-	captionDelay: 250
+  captionDelay: 250,
+  captionsData: 'alt',
+	
 })
 

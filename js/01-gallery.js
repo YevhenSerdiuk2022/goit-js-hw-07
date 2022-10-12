@@ -47,7 +47,8 @@ function modalWindowlGallery(select) {
 
     galleryContainer.addEventListener('keydown', evt => {
 		if (evt.key === 'Escape') {
-			instance.close()
+      instance.close();
+      galleryContainer.removeEventListener('keydown', evt);
 		}
 	})
 }
